@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Sayang ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+RESET
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    background:
+    linear-gradient(
+    135deg,
+    #0f172a,
+    #1e1b4b,
+    #3b0764,
+    #111827);
+    color:white;
+}
+
+/* =========================
+BACKGROUND LOVE
+========================= */
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.hearts span{
+    position:absolute;
+    bottom:-100px;
+    animation:love 12s linear infinite;
+    opacity:0.7;
+}
+
+@keyframes love{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* =========================
+LOADING SCREEN
+========================= */
+.loader{
+    position:fixed;
+    inset:0;
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    z-index:99999;
+    transition:1s;
+}
+
+.loader h1{
+    font-size:50px;
+    color:#ff9ecf;
+    animation:pulse 1.5s infinite;
+}
+
+.loader p{
+    margin-top:20px;
+    color:#ddd;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.1);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+/* =========================
+HEADER
+========================= */
+header{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.hero{
+    width:min(950px,100%);
+    padding:55px;
+    text-align:center;
+    border-radius:35px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.12);
+    backdrop-filter:blur(18px);
+    box-shadow:0 20px 60px rgba(0,0,0,0.4);
+    animation:fadeIn 2s ease;
+}
+
+.hero img{
+    width:190px;
+    height:190px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid rgba(255,255,255,0.2);
+    box-shadow:0 0 40px rgba(255,192,203,0.5);
+    margin-bottom:25px;
+}
+
+/* =========================
+TEXT
+========================= */
+.hero h1{
+    font-size:58px;
+    margin-bottom:20px;
+    background:linear-gradient(to right,#ff9ecf,#ffffff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.typing{
+    overflow:hidden;
+    white-space:nowrap;
+    border-right:3px solid white;
+    width:0;
+    margin:auto;
+    animation:
+    typing 5s steps(50,end) forwards,
+    blink .8s infinite;
+}
+
+@keyframes typing{
+    from{
+        width:0;
+    }
+    to{
+        width:100%;
+    }
+}
+
+@keyframes blink{
+    50%{
+        border-color:transparent;
+    }
+}
+
+.hero p{
+    line-height:1.9;
+    font-size:18px;
+    color:#e2e8f0;
+}
+
+/* =========================
+BUTTON
+========================= */
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:16px 40px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(135deg,#ec4899,#8b5cf6);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:0 10px 30px rgba(236,72,153,0.5);
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.05);
+}
+
+/* =========================
+MESSAGE CARD
+========================= */
+.section{
+    width:min(1100px,100%);
+    margin:auto;
+    padding:80px 20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.12);
+    backdrop-filter:blur(20px);
+    border-radius:30px;
+    padding:50px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.3);
+}
+
+.card h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:30px;
+    color:#ffb6d9;
+}
+
+.card p{
+    line-height:2;
+    font-size:18px;
+    color:#f1f5f9;
+    text-align:justify;
+}
+
+/* =========================
+GALLERY
+========================= */
+.gallery{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:25px;
+    transition:.5s;
+    object-fit:cover;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.gallery img:hover{
+    transform:scale(1.05) rotate(2deg);
+}
+
+/* =========================
+LOVE BOX
+========================= */
+.love-box{
+    margin-top:60px;
+    padding:35px;
+    border-radius:25px;
+    text-align:center;
+    background:linear-gradient(
+    135deg,
+    rgba(236,72,153,0.2),
+    rgba(139,92,246,0.2));
+}
+
+.love-box h3{
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.love-box p{
+    text-align:center;
+    font-size:18px;
+}
+
+/* =========================
+COUNTDOWN
+========================= */
+.countdown{
+    margin-top:60px;
+    text-align:center;
+}
+
+.time{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:25px;
+}
+
+.box{
+    width:120px;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.08);
+}
+
+.box h4{
+    font-size:35px;
+}
+
+/* =========================
+POPUP
+========================= */
+.popup{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    background:white;
+    color:#ec4899;
+    width:320px;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    z-index:9999;
+    transition:.4s;
+}
+
+.popup.active{
+    transform:translate(-50%,-50%) scale(1);
+}
+
+.popup h2{
+    margin-bottom:15px;
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    opacity:0;
+    pointer-events:none;
+    transition:.4s;
+}
+
+.overlay.active{
+    opacity:1;
+    pointer-events:all;
+}
+
+/* =========================
+FOOTER
+========================= */
+footer{
+    text-align:center;
+    padding:40px;
+    color:#ddd;
+}
+
+/* =========================
+ANIMATION
+========================= */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+@media(max-width:768px){
+
+.hero{
+    padding:35px 20px;
+}
+
+.hero h1{
+    font-size:36px;
+}
+
+.card{
+    padding:30px 20px;
+}
+
+.card h2{
+    font-size:30px;
+}
+
+.card p{
+    font-size:16px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+    <h1>❤️</h1>
+    <p>Loading Special Surprise...</p>
+</div>
+
+<!-- HEART -->
+<div class="hearts">
+<span style="left:5%;font-size:20px;">❤️</span>
+<span style="left:15%;font-size:35px;animation-duration:10s;">💖</span>
+<span style="left:30%;font-size:25px;">💕</span>
+<span style="left:50%;font-size:40px;">💗</span>
+<span style="left:70%;font-size:30px;">💘</span>
+<span style="left:85%;font-size:22px;">❤️</span>
+</div>
+
+<!-- HEADER -->
+<header>
+
+<div class="hero">
+
+<!-- FOTO BULAT -->
+<img src="yuhu5.jpg">
+
+<h1 class="typing">
+Happy Birthday Sayang ❤️
+</h1>
+
+<p>
+Untuk Pacarku paling cantik yang lagi ulang tahunn ✨
+</p>
+
+<button class="btn" onclick="playMusic()">
+Putar Musik 🎵
+</button>
+
+<br>
+
+<a href="#pesan" class="btn">
+Buka Pesan Cinta 💌
+</a>
+
+</div>
+
+</header>
+
+<!-- MESSAGE -->
+<section class="section" id="pesan">
+
+<div class="card">
+
+<h2>Buat Kamu ❤️</h2>
+
+<p>
+
+Selamat ulang tahun untuk Pacarku yang Paling Cantik ❤️
+<br><br>
+
+Sekarang hari ulang tahun pacarku yang paling cantik nokk, Cewekku yang paling lucu selalu ngasi tau aku yang baik walaupun sering ngambul dikit. Aku cuma mau bilang makasi udah sama aku terus sayang walaupun banyak problem cuma kamu bisa berubah dikit demi sedikit, Senengnya pacarku ulang tahun sekarang .
+<br><br>
+
+Sekarang umur kamu udah 18 Sayangku, aku doain biar semua hal baik dateng ke kamu beb. Semoga kamu selalu sayang sama aku terus ya bebb, semoga semua mimpi sama hal yang kamu mau tercapai ya beb, aku selalu doain kamu cinta.
+<br><br>
+
+Jangan pernah capek jadi diri sendiri yaa beb, Kamu udah sempurna buat aku sayangku gaada yang lain lagi. Kita selalu ketawa, kamu selalu perhatian ke aku, kamu selalu peduli sama aku juga sayang, semuanya punya arti buat aku sayang.
+<br><br>
+
+Aku tau kamu kadang cape sayang cuma kamu selalu bisa aja selesaiin apapun itu , Ada aja hari kamu capek pasti cuma kamu bisa, sedih, jangan merasa sendiri beb kamu punya aku sayang. Tapi aku harap kamu selalu ingat kalau kamu punya aku disini sayang.
+
+Hari ini jangan sedih yaa beb, karena sekarang hari ulang tahun kamu cintakuu ❤️
+<br><br>
+
+selamat ulang tahun cantik 🎂❤️
+Semoga panjang umur, sehat selalu, tercapai juga impian-impian kamu sayang, lancar juga  sekolah sama trainingnya sayang, dan semakin sayang sama aku hehe  ✨
+
+</p>
+
+<!-- GALLERY -->
+<div class="gallery">
+
+<img src="yuhu1.jpg">
+<img src="yuhu2.jpg">
+<img src="yuhu3.jpg">
+<img src="yuhu8.jpg">
+
+</div>
+
+<!-- LOVE BOX -->
+<div class="love-box">
+
+<h3>❤️ I Love You ❤️</h3>
+
+<p>
+Makasih sudah sama aku terus Sayangg ✨
+</p>
+
+<button class="btn" onclick="showPopup()">
+Klik Surprise Beb 🎁
+</button>
+
+</div>
+
+<!-- COUNTDOWN -->
+<div class="countdown">
+
+<h2>❤️ Forever Countdown ❤️</h2>
+
+<div class="time">
+
+<div class="box">
+<h4 id="days">00</h4>
+<p>Hari</p>
+</div>
+
+<div class="box">
+<h4 id="hours">00</h4>
+<p>Jam</p>
+</div>
+
+<div class="box">
+<h4 id="minutes">00</h4>
+<p>Menit</p>
+</div>
+
+<div class="box">
+<h4 id="seconds">00</h4>
+<p>Detik</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+
+<h2>❤️ Surprise ❤️</h2>
+
+<p>
+Aku sayang sama kamu terus sayang ✨
+<br><br>
+Semoga kita selalu bareng-bareng cinta ❤️
+</p>
+
+<br>
+
+<button class="btn" onclick="closePopup()">
+Tutup
+</button>
+
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- =========================
+SUPER EXTRA ROMANTIC SECTION
+TAMBAHKAN DI ATAS FOOTER
+========================= -->
+
+<!-- LOVE TIMER -->
+<section class="section">
+
+<div class="mega-card">
+
+<h2>⏳ Waktu Aku Sayang Kamu ⏳</h2>
+
+<div class="love-timer">
+
+<div class="timer-card">
+<h3 id="loveDays">0</h3>
+<p>Hari</p>
+</div>
+
+<div class="timer-card">
+<h3 id="loveHours">0</h3>
+<p>Jam</p>
+</div>
+
+<div class="timer-card">
+<h3 id="loveMinutes">0</h3>
+<p>Menit</p>
+</div>
+
+</div>
+
+<p class="timer-text">
+Sayang Kamu terus cintaa ❤️
+</p>
+
+</div>
+
+</section>
+
+<!-- SPINNING HEART -->
+<section class="section">
+
+<div class="mega-card">
+
+<div class="heart-spin">
+❤️
+</div>
+
+<h2>My Lopp  🌸</h2>
+
+<p class="cute-text">
+Buat pacarkuu yang paling lucu,imoet,cantik ✨
+</p>
+
+</div>
+
+</section>
+
+<!-- LOVE CHAT -->
+<section class="section">
+
+<div class="mega-card">
+
+<h2>💬 Random Chat Lucu 💬</h2>
+
+<div class="chat-box left">
+Halo 
+</div>
+
+<div class="chat-box right">
+apa? 
+</div>
+
+<div class="chat-box left">
+mu mau ga jadi pacarku ga
+</div>
+
+<div class="chat-box right">
+wkwkwk, lucu kali e, mau mau , tapi km gapapaa pacaran sama aku?
+</div>
+
+<div class="chat-box left">
+rill kahh
+</div>
+
+</div>
+
+</section>
+
+<!-- FLOATING TEDDY -->
+<div class="floating-teddy">
+🧸
+</div>
+
+<!-- STARS -->
+<div class="stars">
+
+<span>✨</span>
+<span>⭐</span>
+<span>✨</span>
+<span>⭐</span>
+<span>✨</span>
+
+</div>
+
+<!-- LOVE BUTTON -->
+<button class="love-button" onclick="cuteMessage()">
+Klik Bebs 💖
+</button>
+
+<!-- =========================
+CSS TAMBAHAN
+TARUH PALING BAWAH CSS
+========================= -->
+
+<style>
+
+/* =========================
+MEGA CARD
+========================= */
+
+.mega-card{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.12);
+    backdrop-filter:blur(30px);
+    border-radius:35px;
+    padding:55px;
+    text-align:center;
+    box-shadow:0 20px 60px rgba(0,0,0,0.35);
+}
+
+/* =========================
+LOVE TIMER
+========================= */
+
+.love-timer{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.timer-card{
+    width:150px;
+    padding:35px;
+    border-radius:30px;
+    background:rgba(255,255,255,0.08);
+    transition:.4s;
+}
+
+.timer-card:hover{
+    transform:translateY(-10px) scale(1.05);
+    background:rgba(236,72,153,0.18);
+}
+
+.timer-card h3{
+    font-size:45px;
+    color:#ffd6eb;
+}
+
+.timer-card p{
+    margin-top:10px;
+}
+
+.timer-text{
+    margin-top:30px;
+    font-size:20px;
+    color:#ffd6eb;
+}
+
+/* =========================
+SPIN HEART
+========================= */
+
+.heart-spin{
+    font-size:130px;
+    animation:spinHeart 6s linear infinite;
+}
+
+@keyframes spinHeart{
+
+0%{
+    transform:rotate(0deg);
+}
+
+100%{
+    transform:rotate(360deg);
+}
+
+}
+
+.cute-text{
+    margin-top:25px;
+    line-height:2;
+    font-size:20px;
+}
+
+/* =========================
+CHAT BOX
+========================= */
+
+.chat-box{
+    max-width:320px;
+    padding:18px 25px;
+    margin:18px auto;
+    border-radius:25px;
+    font-size:18px;
+    line-height:1.7;
+    animation:fadeInUp 1s ease;
+}
+
+.left{
+    background:linear-gradient(
+    135deg,
+    #ec4899,
+    #8b5cf6);
+
+    margin-left:0;
+}
+
+.right{
+    background:rgba(255,255,255,0.08);
+    margin-right:0;
+}
+
+@keyframes fadeInUp{
+
+from{
+    opacity:0;
+    transform:translateY(30px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+/* =========================
+FLOATING TEDDY
+========================= */
+
+.floating-teddy{
+    position:fixed;
+    left:20px;
+    bottom:20px;
+    font-size:70px;
+    animation:teddyFloat 3s infinite ease-in-out;
+    z-index:999;
+}
+
+@keyframes teddyFloat{
+
+0%{
+    transform:translateY(0);
+}
+
+50%{
+    transform:translateY(-12px);
+}
+
+100%{
+    transform:translateY(0);
+}
+
+}
+
+/* =========================
+STARS
+========================= */
+
+.stars span{
+    position:fixed;
+    font-size:25px;
+    animation:starMove 8s linear infinite;
+    opacity:0.8;
+}
+
+.stars span:nth-child(1){
+    top:10%;
+    left:5%;
+}
+
+.stars span:nth-child(2){
+    top:30%;
+    right:8%;
+}
+
+.stars span:nth-child(3){
+    top:60%;
+    left:10%;
+}
+
+.stars span:nth-child(4){
+    top:75%;
+    right:15%;
+}
+
+.stars span:nth-child(5){
+    top:45%;
+    left:50%;
+}
+
+@keyframes starMove{
+
+0%{
+    transform:translateY(0) rotate(0deg);
+}
+
+100%{
+    transform:translateY(-40px) rotate(360deg);
+}
+
+}
+
+/* =========================
+LOVE BUTTON
+========================= */
+
+.love-button{
+    position:fixed;
+    bottom:160px;
+    right:25px;
+    padding:16px 28px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(
+    135deg,
+    #ff4da6,
+    #8b5cf6);
+
+    color:white;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(255,77,166,0.4);
+
+    animation:buttonPulse 2s infinite;
+}
+
+@keyframes buttonPulse{
+
+0%{
+    transform:scale(1);
+}
+
+50%{
+    transform:scale(1.08);
+}
+
+100%{
+    transform:scale(1);
+}
+
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+.mega-card{
+    padding:30px 20px;
+}
+
+.chat-box{
+    font-size:16px;
+}
+
+.timer-card{
+    width:120px;
+}
+
+}
+
+</style>
+
+<!-- =========================
+SCRIPT TAMBAHAN
+TARUH SEBELUM </script>
+========================= -->
+
+<script>
+
+/* =========================
+LOVE TIMER
+========================= */
+
+const startLove = new Date("2025-06-13");
+
+setInterval(()=>{
+
+const now = new Date();
+
+const diff = now - startLove;
+
+const days = Math.floor(diff / (1000*60*60*24));
+
+const hours = Math.floor(
+(diff % (1000*60*60*24)) / (1000*60*60)
+);
+
+const minutes = Math.floor(
+(diff % (1000*60*60)) / (1000*60)
+);
+
+document.getElementById("loveDays").innerHTML = days;
+
+document.getElementById("loveHours").innerHTML = hours;
+
+document.getElementById("loveMinutes").innerHTML = minutes;
+
+},1000);
+
+/* =========================
+CUTE MESSAGE
+========================= */
+
+function cuteMessage(){
+
+const texts = [
+
+"❤️ Selamat Ulang Tahun cinta ❤️",
+
+"💖 Semoga Doa Doa Kamu Tercapai Beb 💖",
+
+"🥺 Sayang Banget sama Kamu Beb",
+
+"✨ I Love You So Much Beb ✨",
+
+"💕 Aku beruntung punya kamu",
+
+"🌸 Aku Buwat Ini 5 juni 2026 pas kamu lagi di rumah sodara kita call juga"
+
+];
+
+const random = Math.floor(
+Math.random() * texts.length
+);
+
+alert(texts[random]);
+
+}
+
+</script>
+
+<!-- FOOTER -->
+<footer>
+Made with ❤️ For Trisna mailop
+</footer>
+
+<!-- AUDIO -->
+<audio id="musik" loop>
+<source src="yuhuk.mp3" type="audio/mp3">
+</audio>
+
+<script>
+
+
+/* =========================
+LOADING
+========================= */
+window.onload = function(){
+
+setTimeout(() => {
+
+document.getElementById("loader").style.opacity = "0";
+
+setTimeout(() => {
+document.getElementById("loader").style.display = "none";
+},1000);
+
+},2500);
+
+}
+
+/* =========================
+PLAY MUSIC
+========================= */
+function playMusic(){
+document.getElementById("musik").play();
+}
+
+/* =========================
+POPUP
+========================= */
+function showPopup(){
+
+document.getElementById("popup").classList.add("active");
+
+document.getElementById("overlay").classList.add("active");
+
+}
+
+function closePopup(){
+
+document.getElementById("popup").classList.remove("active");
+
+document.getElementById("overlay").classList.remove("active");
+
+}
+
+/* =========================
+COUNTDOWN
+========================= */
+
+const targetDate = new Date("2026-07-01T23:59:59").getTime();
+
+setInterval(() => {
+
+const now = new Date().getTime();
+
+const distance = targetDate - now;
+
+const days = Math.floor(distance / (1000*60*60*24));
+
+const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+
+const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+
+const seconds = Math.floor((distance % (1000*60)) / 1000);
+
+document.getElementById("days").innerHTML = days;
+
+document.getElementById("hours").innerHTML = hours;
+
+document.getElementById("minutes").innerHTML = minutes;
+
+document.getElementById("seconds").innerHTML = seconds;
+
+},1000);
+
+</script>
+
+</body>
+</html>
